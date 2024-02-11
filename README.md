@@ -1,50 +1,40 @@
+# Hello World
 
-# MetaCrafters ATM
-* This project implements a decentralized application (DApp) for an ATM using Ethereum's blockchain and MetaMask. The DApp allows users to connect their MetaMask wallet, view their account balance, deposit and withdraw ETH, and double their balance through a smart contract.
+This Solidity program is a simple "Hello World" program that demonstrates the basic syntax and functionality of the Solidity programming language. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to get a feel for how it works.
 
-## It includes the 4 main codes of the assessment.
-* index.js = the frontend of the program
-* deploy.js = main function of the program
-* Assessment.sol = the contract of the program
-* Assessment.json = the ABI of the program
+## Description
 
-## Prerequisites
-* Before running this application, ensure you have the following prerequisites:
-* Node.js and npm installed
-* MetaMask browser extension installed
-* Hardhat Ethereum development environment
+This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a single function that returns the string "Hello World!". This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
 
-## Smart Contract
-* The smart contract, written in Solidity, is responsible for managing user balances and transactions. It includes functions for depositing, withdrawing, and doubling the balance. The smart contract is deployed using Hardhat.
+## Getting Started
 
-### Smart Contract Functions
-#### constructor(uint initBalance)
-* Description: The constructor function initializes the contract with an initial balance set by the deployer.
-* Parameters: initBalance (uint256): Initial balance for the contract.
-* Visibility: Public
-* State Mutability: Payable
-#### getBalance()
-* Description: Returns the current balance of the contract.
-* Returns: uint256: Current balance of the contract.
-* Visibility: Public
-* State Mutability: View
-### deposit(uint256 _amount)
-* Description: Allows the contract owner to deposit ETH into the contract.
-* Parameters: _amount (uint256): Amount of ETH to deposit.
-* Visibility: Public
-* State Mutability: Payable
-### withdraw(uint256 _withdrawAmount)
-* Description: Allows the contract owner to withdraw a specified amount of ETH from the contract.
-* Parameters: _withdrawAmount (uint256): Amount of ETH to withdraw.
-* Visibility: Public
-* State Mutability: Non-Payable
-### doubleBalance(uint256 _doubleamount)
-* Description: Allows the contract owner to double the balance of the contract by a specified factor.
-* Parameters: _doubleamount (uint256): Factor to double the balance by.
-* Visibility: Public
-* State Mutability: Non-Payable
-### owner()
-* Description: Returns the address of the contract owner.
-* Returns: address payable: Address of the contract owner.
-* Visibility: Public
-* State Mutability: View
+### Executing program
+
+To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+
+Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
+
+```javascript
+pragma solidity ^0.8.4;
+
+contract HelloWorld {
+    function sayHello() public pure returns (string memory) {
+        return "Hello World!";
+    }
+}
+
+```
+
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile HelloWorld.sol" button.
+
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "HelloWorld" contract from the dropdown menu, and then click on the "Deploy" button.
+
+Once the contract is deployed, you can interact with it by calling the sayHello function. Click on the "HelloWorld" contract in the left-hand sidebar, and then click on the "sayHello" function. Finally, click on the "transact" button to execute the function and retrieve the "Hello World!" message.
+
+
+
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
